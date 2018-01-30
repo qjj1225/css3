@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            list-style-type: none;
+            
+        }
+       
+        .content{
+            float:left;
+            overflow: hidden;
+        }
+        .content a {
+            float:left;
+            text-decoration: none;
+            padding:0 40px;
+            height:50px;
+            background:green;
+            border-right:1px solid #fff;
+            font:40px/50px "宋体";
+            color:#fff;
+            transform:skewX(135deg);
+        }
+        .content span{
+            display: block;
+            transform:skewX(-135deg)
+        }
+        .content a:first-child{
+            margin-left:-25px;
+        }
+        .content a:last-child{
+            margin-right:-25px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!-- 
+        1.a需要span自行撑开宽度，content的宽由内容撑开
+        2.a斜切多少度，span就相反斜切多少度，把字体变正常；
+        3.设置第一个和最后一个a的margin值；
+     -->
+        <div class="content">
+            <a href="#"><span>1</span></a>
+            <a href="#"><span>2</span></a>
+            <a href="#"><span>3</span></a>
+            <a href="#"><span>空军飞机</span></a>
+            <a href="#"><span>解放军队浪费空间发链接</span></a>
+        </div>
+   
+</body>
+</html>

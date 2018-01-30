@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #box{
+        position: relative;
+       
+        transform-style: preserve-3d;
+        perspective-origin:100%;
+        transition: 10s;
+    }
+    #box:hover{
+        transform-origin: y;
+        transform:rotateX(180deg) rotateY(360deg);
+       
+    }
+    #box div{
+        position: absolute;
+        width:300px;
+        height:300px;
+        font:100px/300px "宋体";
+        color:#000;
+        text-align: center;
+       
+    }
+    .div1 {background:rgb(192, 255, 197); }
+    .div2 {background:goldenrod; left:-150px; transform-origin: y; transform:translateZ(150px) rotateY(90deg);}
+    .div3 {background:rgb(255, 199, 192); left:150px; transform-origin: y; transform:translateZ(150px) rotateY(90deg);}
+    .div4 {background:rgb(192, 193, 255); top:-150px;  transform-origin: x; transform:translateZ(150px) rotateX(90deg);}
+    .div5 {background:darkorange; top:150px; transform-origin: x; transform:translateZ(150px) rotateX(90deg);}
+    .div6 {background:salmon; transform:translateZ(300px);}
+    </style>
+</head>
+<body>
+    <div style="width:300px; height:300px; margin:400px 0 0 300px;">
+        <div id="box">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+            <div class="div5">5</div>
+            <div class="div6">6</div>
+        </div>
+    </div>
+    
+</body>
+</html>
